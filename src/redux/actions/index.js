@@ -1,1 +1,4 @@
-// Coloque aqui suas actions
+export const submitPersonalInfo = (personalData) => ({
+  type: 'LOGIN',
+  payload: personalData,
+});

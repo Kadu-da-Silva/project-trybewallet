@@ -1,0 +1,28 @@
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px aqua;
+  font-size: 10pt;
+  padding: 8px;
+  margin: 15px;
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 5px;
+  width: 100px;
+}
+
+.login:hover {
+  box-shadow: 0 0 10px aqua;
+  cursor: pointer;
+}
