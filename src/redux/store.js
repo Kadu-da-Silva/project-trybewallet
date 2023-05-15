@@ -1,7 +1,11 @@
 import { createStore } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
-import reducer from './reducers/index';
+import rootReducer from './reducers/index';
 
-const store = createStore(reducer, composeWithDevTools());
+const store = createStore(rootReducer, composeWithDevTools());
+
+if (window.Cypress) {
+  window.store = store;
+}
 
 export default store;

@@ -29,7 +29,7 @@ class Login extends React.Component {
     e.preventDefault();
     const { email } = this.state;
     const { onSubmit, history } = this.props;
-    const personalData = { email };
+    const personalData = email;
     onSubmit(personalData);
     history.push('/carteira');
   }
@@ -78,7 +78,7 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  email: state.personalData.email,
+  email: state.email,
 });
 
 const mapDispatchToProps = (dispatch) => ({
