@@ -5,4 +5,21 @@
   background-color: #282c34;
   color: aqua;
   font-family: 'Inconsolata', monospace;
+  margin: 0;
+}
+
+header {
+  background-color: azure;
+  display: inline-flex;
+  height: 70px;
+  justify-content: right;
+  width: 100%;
+}
+
+header p {
+  background-color: azure;
+  color: #282c34;
+  margin-right: 30px;
+  font-family: 'Lucida Sans',  sans-serif;
+  font-size: 80%;
 }

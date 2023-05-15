@@ -1,15 +1,10 @@
 import React from 'react';
+import Header from '../components/Header';
 
 class Wallet extends React.Component {
   render() {
     return (
-      <main>
-        <header>
-          <p data-testid="email-field">Email: </p>
-          <p data-testid="total-field">Despesa Total: R$ </p>
-          <p data-testid="header-currency-field"> Moeda: </p>
-        </header>
-      </main>
+      <Header />
     );
   }
 }
