@@ -1,4 +1,4 @@
-form {
+.form-login {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@ form {
   padding: 20px;
 }
 
-input {
+.form-login input {
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 10px aqua;

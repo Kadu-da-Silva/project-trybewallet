@@ -42,7 +42,7 @@ class Login extends React.Component {
     const isSubmitDisabled = isEmailInvalid || isPasswordInvalid;
 
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form onSubmit={ this.handleSubmit } className="form-login">
         <h2>Login</h2>
         <label htmlFor="email">
           <input
@@ -82,7 +82,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (data) => dispatch(submitPersonalInfo(data)),
+  onSubmit: (data) => {
+    dispatch(submitPersonalInfo(data));
+    // dispatch(fetchApi());
+  },
 });
 
 Login.propTypes = {
