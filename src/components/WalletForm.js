@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchApi } from '../redux/actions';
 import '../styles/Wallet.css';
+import Button from './Button';
 
 class WalletForm extends Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ class WalletForm extends Component {
     return (
       <form className="form-despesa">
         <label>
+          Valor
           <input
             type="number"
             data-testid="value-input"
@@ -22,13 +24,7 @@ class WalletForm extends Component {
           />
         </label>
         <label>
-          <input
-            type="text"
-            data-testid="description-input"
-            placeholder="Descrição da despesa"
-          />
-        </label>
-        <label>
+          Moeda
           <select data-testid="currency-input">
             {currencies.map((obj) => (
               <option value="" key={ obj }>{obj}</option>
@@ -36,6 +32,7 @@ class WalletForm extends Component {
           </select>
         </label>
         <label>
+          Método de pagamento:
           <select data-testid="method-input">
             <option value="Dinheiro" key="Dinheiro">Dinheiro</option>
             <option value="Crédito" key="Crédito">Cartão de crédito</option>
@@ -43,6 +40,7 @@ class WalletForm extends Component {
           </select>
         </label>
         <label>
+          Categoria
           <select data-testid="tag-input">
             <option value="Alimentação" key="Alimentação">Alimentação</option>
             <option value="Lazer" key="Lazer">Lazer</option>
@@ -51,6 +49,19 @@ class WalletForm extends Component {
             <option value="Saúde" key="Saúde">Saúde</option>
           </select>
         </label>
+        <label>
+          Descrição
+          <input
+            type="text"
+            data-testid="description-input"
+            placeholder="Descrição da despesa"
+          />
+        </label>
+        <Button
+          type="button"
+          label="Adicionar"
+          moreClasses="btn-wallet"
+        />
       </form>
     );
   }
