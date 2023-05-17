@@ -24,3 +24,11 @@ header p {
   font-family: 'Lucida Sans',  sans-serif;
   font-size: 80%;
 }
+
+header span {
+  background-color: azure;
+  color: #282c34;
+  margin-right: 10px;
+  font-family: 'Lucida Sans',  sans-serif;
+  font-size: 80%;
+}
