@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import store from './redux/store';
 
 ReactDOM
-  .createRoot(document.getElementById('root'))
+  .createRoot(document.getElementById('render'))
   .render(
     <BrowserRouter>
       <Provider store={ store }>

@@ -10,6 +10,7 @@ class Button extends Component {
         type={ type }
         onClick={ onClick }
         disabled={ disabled }
+        data-testid="submit-button"
       >
         { label }
       </button>
