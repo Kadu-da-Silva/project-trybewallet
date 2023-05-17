@@ -37,7 +37,7 @@ Header.propTypes = {
   email: PropTypes.string.isRequired,
   expenses: PropTypes.arrayOf(
     PropTypes.shape({
-      value: PropTypes.number.isRequired,
+      value: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };
