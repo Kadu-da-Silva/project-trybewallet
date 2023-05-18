@@ -38,3 +38,10 @@ export const addExpense = (expense) => async (dispatch) => {
     dispatch(failedApi(error));
   }
 };
+
+export function deleteExpense(id) {
+  return {
+    type: 'DELETE_EXPENSE',
+    payload: id,
+  };
+}

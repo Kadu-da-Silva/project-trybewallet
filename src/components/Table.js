@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import { deleteExpense } from '../redux/actions';
 
 class Table extends Component {
+  constructor(props) {
+    super(props);
+    this.handleDeleteExpense = this.handleDeleteExpense.bind(this);
+  }
+
+  handleDeleteExpense(id) {
+    const { dispatch } = this.props;
+    // Despache a ação para excluir a despesa com o ID fornecido
+    dispatch(deleteExpense(id));
+  }
+
   render() {
     const { expenses } = this.props;
 
@@ -48,6 +60,8 @@ class Table extends Component {
                   <Button
                     label="Excluir"
                     moreClasses="btn-wallet"
+                    onClick={ () => this.handleDeleteExpense(item.id) }
+                    testId="delete-btn"
                   />
                 </td>
               </tr>
@@ -62,6 +76,7 @@ class Table extends Component {
 Table.propTypes = {
   expenses: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       tag: PropTypes.string.isRequired,
       method: PropTypes.string.isRequired,
@@ -69,6 +84,7 @@ Table.propTypes = {
       currency: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
