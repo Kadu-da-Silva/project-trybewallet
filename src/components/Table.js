@@ -35,28 +35,29 @@ class Table extends Component {
           </tr>
         </thead>
         <tbody>
-          {expenses.map((item, index) => {
-            const { description, tag, method, value, currency, exchangeRates } = item;
+          {expenses.map((item) => {
+            const { id, description, tag, method, value, currency, exchangeRates } = item;
             const { ask } = exchangeRates[currency];
-            const cambio = Number(ask).toFixed(2);
+            const exchange = Number(ask).toFixed(2);
             const convertedValue = (value * ask).toFixed(2);
             const result = Number(value).toFixed(2);
             const { name } = exchangeRates[currency];
 
             return (
-              <tr key={ index }>
+              <tr key={ id }>
                 <td>{description}</td>
                 <td>{tag}</td>
                 <td>{method}</td>
                 <td>{result}</td>
                 <td>{name}</td>
-                <td>{cambio}</td>
+                <td>{exchange}</td>
                 <td>{convertedValue}</td>
                 <td>Real</td>
                 <td>
                   <Button
-                    label="Editar"
+                    label="Editar Despesa"
                     moreClasses="btn-wallet"
+                    testId="edit-btn"
                   />
                   <Button
                     label="Excluir"
