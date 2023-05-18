@@ -31,7 +31,15 @@ class WalletForm extends Component {
 
   handleChange({ target }) {
     const { name, value } = target;
-    this.setState({ [name]: value });
+    let newValue = value;
+
+    // Verifica se o valor contém uma vírgula e substitui por ponto
+    if (name === 'value' && value.includes(',')) {
+      newValue = value.replace(',', '.');
+    }
+
+    // Atualiza o estado com o valor convertido
+    this.setState({ [name]: newValue });
   }
 
   handleAddExpense() {
@@ -72,7 +80,7 @@ class WalletForm extends Component {
           Valor
           <input
             name="value"
-            type="number"
+            type="text"
             data-testid="value-input"
             placeholder="Valor da despesa"
             value={ value }
