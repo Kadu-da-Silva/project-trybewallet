@@ -55,7 +55,7 @@ class Table extends Component {
                 <td>Real</td>
                 <td>
                   <Button
-                    label="Editar Despesa"
+                    label="Editar"
                     moreClasses="btn-wallet"
                     testId="edit-btn"
                   />
