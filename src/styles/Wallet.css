@@ -39,7 +39,7 @@ table {
   width: 100%;
 }
 
-th, td {
+th , td {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -49,6 +49,6 @@ th {
   color: #282c34;
 }
 
-tr:nth-child(even) {
+tr:nth-child( even ) {
   background-color: #f9f9f9;
 }
