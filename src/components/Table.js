@@ -12,7 +12,7 @@ class Table extends Component {
 
   handleDeleteExpense(id) {
     const { dispatch } = this.props;
-    // Despache a ação para excluir a despesa com o ID fornecido
+    // Despacha a ação para excluir a despesa com o ID fornecido
     dispatch(deleteExpense(id));
   }
 
