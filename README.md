@@ -1,6 +1,6 @@
 # Projeto Trybewallet 👛
 
-Neste projeto desenvolvi uma carteira de controle de gastos com conversor de moedas, ao utilizar essa aplicação um usuário deverá ser capaz de:
+Neste projeto desenvolvi uma carteira de controle de gastos com conversor de moedas, ao utilizar essa aplicação o usuário é ser capaz de:
 
 * Adicionar, remover e editar um gasto;
 * Visualizar uma tabelas com seus gastos;
